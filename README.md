@@ -1,2 +1,3 @@
-# silver-shades
-Code and relevant files for BTE Hackathon 2024
+# Silver Shades
+
+The modern way for automatic blind control in classrooms.
