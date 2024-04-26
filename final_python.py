@@ -83,7 +83,7 @@ if __name__ == '__main__':
             outer_break = False
             if key == curr_classroom:
                 for val in dict_class_times[key]:
-                    if formatted_time >= val[0] and formatted_time <= val[1]: # class in session
+                    if formatted_time >= val[0] and formatted_time <= val[1] and day_name in val[2]: # class in session
                         outer_break = True
                         break
                 if outer_break == True: 
