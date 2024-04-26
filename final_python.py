@@ -30,9 +30,9 @@ if __name__ == '__main__':
     # sheet = client.open_by_url(sheet_url).sheet1
     # values = sheet.get_all_values()
 
-    ser = serial.Serial('/dev/cu.usbmodem1101', 9600) 
+    ser = serial.Serial('/dev/cu.usbmodem101', 9600) 
     ser.flushInput()
-    ser2 = serial.Serial('/dev/cu.usbmodem101', 9600) 
+    ser2 = serial.Serial('/dev/cu.usbmodem1101', 9600) 
     ser2.flushInput()
     min_energy_saved = 0
     IMAP_SERVER = 'imap.outlook.com'
@@ -136,7 +136,8 @@ if __name__ == '__main__':
                                         break_again = True
                                         break
                                 if break_again == True: break 
-                                ser.write(b'H')
+                                print("about to call console.")
+                                ser2.write(b'H')
                                 message = Mail(
                                     from_email='flipprlights@outlook.com', # replace from_email asap
                                     to_emails='anish.susarla@gmail.com', # who should email get sent to?
